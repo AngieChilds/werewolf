@@ -1,9 +1,13 @@
 
-<% provide(:title, 'Home') %>
+<div class="center hero-unit">
+  <h1>Welcome to the Werewolf game</h1>
 
-<h1>Werewolf</h1>
-<p>
-  This is the home page for the Werewolf game.
+  <h2>
+    This is the home page for the werewolf game.
+   
+  </h2>
+<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
   
-  
-</p>
+</div>
+
+<%= link_to image_tag("Werewolf.png", alt: "Werewolf") %>
