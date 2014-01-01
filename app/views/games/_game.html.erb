@@ -1,0 +1,23 @@
+<div>
+
+
+<table class="horizontal_table" style="width: 100%; height: 10px;" border="1" cellspacing="0">
+<tbody>
+  
+    <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+    <td width="40%" ><%= game.player %></td>
+    <td width="10%"><%= game.user_id %></td>
+    <td width="15%"><%= game.alive %></td>
+    <% if current_user.admin? %>
+    <td width="15%"><%= game.werewolf %></td>
+    <td width="15%"><%= link_to 'werewolf', beast_village_game_url, method: :patch,
+                                  data: { confirm: "werewolf?" }%></td>
+    <td width="10%"><%= game.votes_against %></td>
+    <td width="10%"><%= game.voted %></td>
+   <% end %>
+    
+     </tr>
+
+</tbody>
+</table>
+</div>

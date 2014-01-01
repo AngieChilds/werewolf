@@ -1,4 +1,12 @@
 Werewolf::Application.routes.draw do
+   
+  resources :villages do
+   resources :games do
+    member do 
+     patch 'beast'
+  end
+   end
+  end
  resources :users do
    member do
      patch 'more'

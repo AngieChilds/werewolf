@@ -1,0 +1,11 @@
+<%= form_for([@village, @village.games.build]) do |f| %>
+   <%= render 'shared/error_messages', object: f.object %>
+<div>
+   Player:<%= current_user.name %>  <%= f.radio_button :player, current_user.name, :checked => true %><br/>
+    <%= f.radio_button :user_id, current_user.id, :checked => true %>
+<%= f.submit "Join this village" %>
+  
+<% end %>
+
+</div>
+
