@@ -2,9 +2,9 @@ Werewolf::Application.routes.draw do
    
   resources :villages do
    resources :games do
-    member do 
-     patch 'beast'
-  end
+   member do
+    patch 'beast'
+    end
    end
   end
  resources :users do
@@ -21,5 +21,5 @@ Werewolf::Application.routes.draw do
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
-  
+ 
 end

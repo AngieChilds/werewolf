@@ -78,9 +78,13 @@ railties\:install\:migrations=
 routes=Print out all defined routes in match order, with names. Target specific controller with CONTROLLER=x.
 secret=Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions).
 spec=Run all specs in spec directory (excluding plugin specs)
+spec\:controllers=Run the code examples in spec/controllers
+spec\:helpers=Run the code examples in spec/helpers
 spec\:models=Run the code examples in spec/models
 spec\:requests=Run the code examples in spec/requests
+spec\:routing=Run the code examples in spec/routing
 spec\:statsetup=
+spec\:views=Run the code examples in spec/views
 stats=Report code statistics (KLOCs, etc) from the application
 test\:prepare=
 time\:zones\:all=Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6

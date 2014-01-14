@@ -76,6 +76,6 @@ class VillagesController < ApplicationController
 
     
     def village_params
-      params.require(:village).permit(:name, :games_attributes => [:id, :user_id])
+      params.require(:village).permit(:name, games_attributes: [:id, :player])
     end
 end

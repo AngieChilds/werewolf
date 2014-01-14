@@ -32,19 +32,13 @@ class GamesController < ApplicationController
 #games#show PATCH  /villages/:village_id/games/:id(.:format)
     redirect_to village_path(@village)
 end
-def beast
-  @village = Village.find(params[:village_id])
-  @game = @village.games.find(params[:id])
-  @game.toggle!(:werewolf)
-  flash[:notice] = 'this werewolf'
-  redirect_to village_path
- end
+
 
 
  def update 
    village = Village.find(params[:village_id])
-  @game = village.games.find(params[:id])
-   if @game.update(params(:game).permit!)
+  @game = @village.game.find(params[:id])
+   if @game.update_attributes(params(:game).permit(:id, :player, :user_id, :alive, :werewolf))
     redirect_to village_path(@village)
 #/villages/:village_id/games/:id(.:format
  else
@@ -53,7 +47,14 @@ def beast
  end
 def edit
     @village = Village.find(params[:village_id])
-    @game = @village.games.find(params[:id])
+    @game = @village.game.find(params[:id])
      end
+def beast
+  @village = Village.find(params[:village_id])
+  @game = @village.games.find(params[:id])
+  @game.toggle!(:werewolf)
+  flash[:notice] = 'this werewolf'
+  redirect_to village_path
+ end
 
 end

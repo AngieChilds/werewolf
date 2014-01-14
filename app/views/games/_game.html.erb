@@ -10,8 +10,7 @@
     <td width="15%"><%= game.alive %></td>
     <% if current_user.admin? %>
     <td width="15%"><%= game.werewolf %></td>
-    <td width="15%"><%= link_to 'werewolf', beast_village_game_url, method: :patch,
-                                  data: { confirm: "werewolf?" }%></td>
+   <%= link_to "beast", beast_village_game_path(@village, game) %>
     <td width="10%"><%= game.votes_against %></td>
     <td width="10%"><%= game.voted %></td>
    <% end %>

@@ -13,6 +13,9 @@ module GamesHelper
 #  shuffle, mark one or more? as werewolf. toggle!(:werewolf)
 #  display the werewolf on user page only for current_user.(private)
 #Start a blog - array with all :alive players to vote in the top section (game messages)
+
+
+
 #new day
 #1 for all the werewolf: false players (that click the vote)
 #  the array with all the alive player to be radio_button count votes_against
